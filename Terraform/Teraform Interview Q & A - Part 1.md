@@ -10,8 +10,9 @@ Terraform maintains state to track resources it manages. It stores this state in
 - Encrypt state files, especially if they contain sensitive data.
 - Use **state commands** (`terraform state mv`, `terraform state rm`) cautiously.
 
-# Enable S3 native state locking
+### Enable S3 native state locking
 use_lockfile = true
+
 DynamoDB-based locking is deprecated and will be removed in a future Terraform version.
 
 ---
