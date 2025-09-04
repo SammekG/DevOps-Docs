@@ -17,24 +17,15 @@ DynamoDB-based locking is deprecated and will be removed in a future Terraform v
 
 ```
 
-
 terraform {
- 
-  backend "s3" {
- 
-    bucket       = "ct-bucket-2025"
- 
-    key          = "cloudthat/terraform.tfstate"
- 
-    region       = "us-east-1"
- 
-    encrypt      = true
- 
-    use_lockfile = true  # S3 native locking
- 
-  }
- 
-}
+   backend "s3" {
+     bucket       = "ct-bucket-2025"
+     key          = "cloudthat/terraform.tfstate"
+     region       = "us-east-1"
+     encrypt      = true
+     use_lockfile = true  # S3 native locking
+   }
+ }
 
 ```
 
